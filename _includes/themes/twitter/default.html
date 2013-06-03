@@ -45,17 +45,19 @@
 
       <div class="content">
         <div class="row">
-          <div class="span3">
-            <div class="well sidebar-nav">
-              <ul class="nav nav-list">
-                {% assign pages_list = site.pages %}
-                {% assign group = 'navigation' %}
-                {% include JB/pages_list %}
-              </ul>
+          <div class="offset1 span10 well">
+            <div class="row">
+              <div class="span3">
+                  <ul class="nav nav-list">
+                    {% assign pages_list = site.pages %}
+                    {% assign group = 'navigation' %}
+                    {% include JB/pages_list %}
+                  </ul>
+                </div>
+              <div class="span6">
+                {{ content }}
+              </div>
             </div>
-          </div>
-          <div class="span9">
-            {{ content }}
           </div>
       </div>
       <hr>
