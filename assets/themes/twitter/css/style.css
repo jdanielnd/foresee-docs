@@ -3,6 +3,9 @@
 body {
   padding: 80px;
   background-color: #F5F5F5;
+  line-height: 1.6em;
+  color: #333;
+  font: 15px/1.4 helvetica,arial,freesans,clean,sans-serif;
 }
 
 .container-narrow {
@@ -96,4 +99,41 @@ body {
 
 .well {
   background: #fefefe;
+}
+
+.page-text {
+  margin: auto 20px;
+}
+
+.p {
+  margin: 1em 0;
+}
+
+h5 {
+  text-align: center;
+}
+
+hr {
+  margin: 2em 0;
+}
+
+.img-box {
+  margin: 2em 0;
+}
+
+.img-box img {
+  display: block;
+  margin: auto;
+}
+
+ol li {
+  margin: 1em 0;
+}
+
+.table td, .table th {
+  vertical-align: center;
+  text-align: center
+}
+.table th {
+  font-weight: 300;
 }

@@ -36,12 +36,7 @@
     <div class="navbar navbar-fixed-top">
       <div class="navbar-inner">
         <div class="container">
-          <a class="brand" href="{{ HOME_PATH }}">Fores.<span>ee</span></a>
-          <ul class="nav">
-            {% assign pages_list = site.pages %}
-            {% assign group = 'navigation' %}
-            {% include JB/pages_list %}
-          </ul>
+          <a class="brand" href="{{ HOME_PATH }}">Fores.<span>ee</span>:docs</a>
         </div>
       </div>
     </div>
@@ -53,7 +48,9 @@
           <div class="span3">
             <div class="well sidebar-nav">
               <ul class="nav nav-list">
-                <li class="nav-header">Fores.ee</li>
+                {% assign pages_list = site.pages %}
+                {% assign group = 'navigation' %}
+                {% include JB/pages_list %}
               </ul>
             </div>
           </div>
