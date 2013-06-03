@@ -1,0 +1,14 @@
+
+http://jdanielnd.github.io/foresee-docs/rss.xml
+http://jdanielnd.github.io/foresee-docs/articles/o-que-e-projecao.html
+http://jdanielnd.github.io/foresee-docs/articles/getting-started.html
+http://jdanielnd.github.io/foresee-docs/articles.html
+http://jdanielnd.github.io/foresee-docs/pages.html
+http://jdanielnd.github.io/foresee-docs/sitemap.txt
+http://jdanielnd.github.io/foresee-docs/archive.html
+http://jdanielnd.github.io/foresee-docs/categories.html
+http://jdanielnd.github.io/foresee-docs/atom.xml
+http://jdanielnd.github.io/foresee-docs/tags.html
+http://jdanielnd.github.io/foresee-docs/index.html
+
+http://jdanielnd.github.io/foresee-docs/lessons/2011/12/29/jekyll-introduction
