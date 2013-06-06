@@ -29,6 +29,9 @@
     <!-- atom & rss feed -->
     <link href="{{ BASE_PATH }}{{ site.JB.atom_path }}" type="application/atom+xml" rel="alternate" title="Sitewide ATOM Feed">
     <link href="{{ BASE_PATH }}{{ site.JB.rss_path }}" type="application/rss+xml" rel="alternate" title="Sitewide RSS Feed">
+    <link rel="icon" 
+      type="image/x-icon" 
+      href="https://s3.amazonaws.com/foresee/favicon.ico"> 
 
   </head>
 
@@ -49,9 +52,13 @@
             <div class="row">
               <div class="span3">
                   <ul class="nav nav-list">
-                    {% assign pages_list = site.pages %}
-                    {% assign group = 'navigation' %}
-                    {% include JB/pages_list %}
+                    <li class="nav-header">Guias de uso</li>
+                    <li><a href="articles/primeiros-passos.html">Primeiros passos</a></li>
+                    <li><a href="articles/primeiros-passos.html">O que é projeção de vendas?</a></li>
+                    <li><a href="articles/primeiros-passos.html">Por que utilizar
+                      projeções estatísticas?</a></li>
+                    <li><a href="articles/primeiros-passos.html">Como interpretar os
+                      gráficos de projeção do Foresee?</a></li>
                   </ul>
                 </div>
               <div class="span6">
@@ -62,10 +69,7 @@
       </div>
       <hr>
       <footer>
-        <p>&copy; {{ site.time | date: '%Y' }} {{ site.author.name }}
-          with help from <a href="http://jekyllbootstrap.com" target="_blank" title="The Definitive Jekyll Blogging Framework">Jekyll Bootstrap</a>
-          and <a href="http://twitter.github.com/bootstrap/" target="_blank">Twitter Bootstrap</a>
-        </p>
+        <p>&copy; {{ site.time | date: '%Y' }} {{ site.author.name }}</p>
       </footer>
 
     </div>

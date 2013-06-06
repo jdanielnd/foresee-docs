@@ -1,11 +1,22 @@
 /* Custom container */
 
+@import url(http://fonts.googleapis.com/css?family=Open+Sans:300,400);
+
 body {
   padding: 80px;
   background-color: #F5F5F5;
   line-height: 1.6em;
   color: #333;
   font: 15px/1.4 helvetica,arial,freesans,clean,sans-serif;
+}
+
+section {
+  margin: 30px auto;
+}
+
+h1 {
+  font-family: "Open Sans", sans-serif;
+  font-weight: 300;
 }
 
 .container-narrow {
