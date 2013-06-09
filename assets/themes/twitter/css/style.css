@@ -141,8 +141,8 @@ ol li {
   margin: 1em 0;
 }
 
-.table td, .table th {
-  vertical-align: center;
+.table td, .table thead th {
+  vertical-align: middle;
   text-align: center
 }
 .table th {

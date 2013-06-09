@@ -1,0 +1,81 @@
+---
+layout: page
+title: FAQ
+group: articles
+---
+{% include JB/setup %}
+
+<script  type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+<script type="text/javascript">
+$('#login-inner,#fade,#footer-top').hide();
+jQuery(document).ready(function() {
+
+  $('.scroll').click(function(e) {
+   var activeDestination = $(this).attr("href");
+       $('html,body').animate({
+       scrollTop: $(activeDestination).offset().top -75}, 1000);
+        e.preventDefault();
+  });
+
+});
+</script>
+
+<ol>
+  <li><a class="scroll" href="#1">A escolha do Intervalo de Predição (70%, 80% e 90%) afeta a precisão das projeções?</a></li>
+  <li><a class="scroll" href="#2">O que determina o tamanho de um Intervalo de Predição?</a></li>
+  <li><a class="scroll" href="#3">Os Limites Superiores e Inferiores de um Intervalo de Predição podem ser interpretados como “melhor cenário” e “pior cenário” de vendas?</a></li>
+  <li><a class="scroll" href="#4">O Foresee pode eventualmente projetar “valores negativos” para as vendas de um produto?</a></li>
+  <li><a class="scroll" href="#5">Qual é o método utilizado pelo Foresee para o cálculo das projeções?</a></li>
+  <li><a class="scroll" href="#6">Os erros de predição são afetados pelo nível de agregação dos dados?</a></li>
+</ol>
+<hr>
+<ol>
+  <li id="1">
+    <p><strong>A escolha do Intervalo de Predição (70%, 80% e 90%) afeta a precisão das projeções?</strong></p>
+
+    <p>Não. Os valores projetados são exatamente os mesmos, independentemente do Intervalo de Predição selecionado.</p>
+
+    <p>O que muda é apenas a distância entre os limites superior e inferior do intervalo, que será tanto maior quanto maior for o percentual selecionado.</p>
+  </li>
+
+  <li id="2">
+    <p><strong>O que determina o tamanho de um Intervalo de Predição?</strong></p>
+    <p>O tamanho de um Intervalo de Predição - medido pela distância entre seus Limites Superior e Inferior - depende de três fatores:</p>
+    <ol type="a">
+      <li>Em primeiro lugar, do percentual que escolhemos para o Intervalo de Predição ao gerar as projeções com o Foresee (70%, 80% ou 90%), sendo que quanto maior o percentual selecionado (quanto maior o nível de confiança desejado), maiores serão os intervalos.</li>
+      <li>Em segundo lugar, o tamanho dos Intervalos de Predição depende dos dados que estão sendo projetados. Se os números observados no passado apresentaram variações importantes ao longo do tempo, e essas variações não evidenciaram nenhuma lógica ou padrão identificável – como tendência, ciclo ou sazonalidade - ao projetá-la o grau de incerteza será elevado, e os Intervalos de Predição vão refletir essa incerteza, assumindo valores maiores.</li>
+      <li>Por último o tamanho dos intervalos de predição depende também do fator “tempo”. À medida que as projeções avançam em direção ao futuro, a incerteza torna-se maior, e os intervalos de predição tendem a ficar também maiores.</li>
+    </ol>
+  </li>
+
+  <li id="3">
+    <p><strong>Os Limites Superiores e Inferiores de um Intervalo de Predição podem ser interpretados como “melhor cenário” e “pior cenário” de vendas?</strong></p>
+    <p>Se estivermos nos referindo a um único período – por exemplo, a um único mês - a resposta é sim. O limite superior de um Intervalo de Predição de 70%, por exemplo, nos diz que a probabilidade das vendas naquele mês ficarem acima daquele valor é de apenas 15% e, portanto, este poderia ser considerado um cenário bastante favorável para aquele mês específico.</p>
+    <p>Agora imagine que alguém somasse os valores dos limites superiores dos Intervalos de Predição para os próximos 12 meses. Seria correto interpretar a soma desses valores como uma estimativa de vendas dentro do “melhor cenário” para o próximo ano?</p>
+    <p>Neste caso, como estamos nos referindo a um conjunto de períodos, a resposta é não! </p>
+    <p>A probabilidade das vendas acumuladas alcançarem um valor igual ou superior à soma dos Limites Superiores dos Intervalos de Predição seria, neste exemplo, muito inferior a 15%, constituindo, portanto, um cenário extremamente improvável.</p>
+    <p>Isto ocorre porque a probabilidade das vendas da empresa serem iguais ou maiores que o limite superior do Intervalo de Predição de 70% durante dois meses consecutivos já seria extremamente baixa, de 0,15 x 0,15, ou seja, de 2,25%.</p>
+    <p>A probabilidade disto ocorrer por 12 meses consecutivos seria virtualmente zero!</p>
+  </li>
+
+  <li id="4">
+    <p><strong>O Foresee pode eventualmente projetar “valores negativos” para as vendas de um produto?</strong></p>
+    <p>Sim. Eventualmente as projeções podem indicar valores abaixo de zero.</p>
+    <p>Obviamente, isso não faz sentido do ponto de vista econômico, uma vez que não existem vendas “negativas”.</p>
+    <p>Entretanto esses valores fazem sentido do ponto de vista estatístico, e devem ser interpretados como indicando uma probabilidade mais elevada de que as vendas daquele produto possam ficar “zeradas” durante os períodos para os quais as projeções assinalaram valores negativos. E essa probabilidade será tanto maior quanto mais negativos forem os valores projetados.</p>
+  </li>
+
+  <li id="5">
+    <p><strong>Qual é o método utilizado pelo Foresee para o cálculo das projeções?</strong></p>
+    <p>O Foresee combina – através de metodologia proprietária - duas famílias de modelos estatísticos amplamente testados e validados pelas maiores empresas do mundo, que são os modelos ARIMA e Holt-Winters.</p>
+    <p>A combinação adequada desses modelos – e isto é amplamente documentado na literatura especializada – se traduz em reduções consistentes nos erros médios de predição.</p>
+  </li>
+
+  <li id="6">
+    <p><strong>Os erros de predição são afetados pelo nível de agregação dos dados?</strong></p>
+    <p>Sim. Os erros de predição - que são os desvios entre os valores projetados e os valores efetivamente observados – são maiores para dados desagregados, e cada vez menores à medida que os dados vão sendo agregados.</p>
+    <p>Por exemplo, os erros de predição para o faturamento total da empresa serão normalmente menores que os erros de predição para o valor das vendas de um item específico que a empresa comercializa.</p>
+    <p>Da mesma maneira, os erros de predição para o faturamento acumulado para um período de 06 meses serão normalmente menores que os erros de predição para o faturamento da empresa em um mês específico.</p>
+    <p>Portanto, é importante lembrar que, quanto maior a desagregação dos dados, maior é a sua volatilidade, e maiores os erros de predição. </p>
+  </li>
+</ol>
