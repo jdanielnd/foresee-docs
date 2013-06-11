@@ -5,7 +5,7 @@ group: articles
 ---
 {% include JB/setup %}
 
-<p>Para gerar projeções, é necessário transferir para o Foresee os dados históricos das séries que você deseja projetar. E essa transferência é feita através de um <strong>arquivo de dados “CSV”</strong>.</p>
+<p>Para gerar projeções é necessário transferir para o Foresee os dados históricos das séries que você deseja projetar. E essa transferência é feita através de um <strong>arquivo de dados “CSV”</strong>.</p>
 
 <p>Este arquivo pode ser facilmente criado a partir de uma planilha Microsoft Excel®. Assim que as datas e os valores das séries que você deseja projetar estiverem corretamente inseridos nessa planilha, basta clicar (dentro do Excel) em <strong>Arquivo > Salvar Como ></strong> e selecionar a opção <strong>CSV</strong>.</p>
 
@@ -35,7 +35,7 @@ group: articles
     <p><strong>Formatação das séries históricas</strong></p>
     <p>As séries históricas podem representar:</p>
     <ol type="a">
-      <li><strong>Valores monetários</strong>: por exemplo, valor do faturamento mensal na Região I.</li>
+      <li><strong>Valores monetários</strong>: por exemplo, valor do faturamento mensal.</li>
       <li><strong>Quantidades</strong>: por exemplo, quantidade vendida mensalmente do item “xyz”.</li>
       <li><strong>Percentuais</strong>: por exemplo, margem mensal de contribuição.</li>
     </ol>
@@ -205,21 +205,21 @@ group: articles
     <p>Num arquivo de dados as diferentes séries compartilham uma única coluna de datas. Isto significa que essas séries:</p>
     <ol type="a">
       <li>Devem ter a mesma frequência, seja ela mensal, trimestral, semestral ou anual.</li>
-      <li>Devem começar no mesmo período.</li>
-      <li>Devem terminar no mesmo período.</li>
-      <li>Como consequência dos itens (b) e (c) acima, elas devem ter o mesmo tamanho, ou seja, o mesmo número de períodos.</li>
+      <li>Devem começar, todas elas, no mesmo período.</li>
+      <li>Devem terminar, todas elas, no mesmo período.</li>
+      <li>Devem ter o mesmo tamanho, ou seja, o mesmo número de períodos.</li>
     </ol>
   </li>
   <li>
     <p><strong>Dados “faltantes” e valores “zerados”</strong></p>
     <p>Um “dado faltante” é um dado para o qual não existe registro. Digamos que a empresa queira projetar as vendas de um determinado produto, mas não disponha do número de unidades vendidas desse produto num determinado mês, que deveria estar incluído na série histórica.</p>
 
-    <p>O Foresee não consegue gerar essa projeção por haver um “valor faltante” ou uma “lacuna” na série histórica.</p>
+    <p>O Foresee não consegue gerar essa projeção por haver um “valor faltante” ou uma “lacuna” na série histórica. As séries precisam ser completas, sem valores ou períodos "faltantes".</p>
 
     <p>Observe que isso é diferente de um valor igual a “zero”.</p>
 
     <p>Digamos que num determinado mês a venda de um produto tenha sido zero, ou seja, a empresa não vendeu nenhuma unidade daquele produto.</p>
 
-    <p>Esse valor deve ser reportado na série histórica como “0” (número zero), e não como um campo em branco.</p>
+    <p>Esse valor deve ser reportado na série histórica como “0” (número zero), e não como um campo em branco ou "valor faltante"</p>
   </li>
 </ol>
