@@ -116,6 +116,14 @@ ul.nav {
   margin-top: 20px;
 }
 
+ul.nav ul li a:hover {
+  text-decoration: none;
+}
+
+ul.nav ul li:hover {
+  background-color: #EEE;
+}
+
 .well {
   background: #fefefe;
 }
