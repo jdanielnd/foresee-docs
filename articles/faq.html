@@ -27,6 +27,8 @@ jQuery(document).ready(function() {
   <li><a class="scroll" href="#4">O Foresee pode eventualmente projetar “valores negativos” para as vendas de um produto?</a></li>
   <li><a class="scroll" href="#5">Qual é o método utilizado pelo Foresee para o cálculo das projeções?</a></li>
   <li><a class="scroll" href="#6">Os erros de predição são afetados pelo nível de agregação dos dados?</a></li>
+  <li><a class="scroll" href="#7">Como eliminar os separadores de milhar no meu arquivo de dados CSV?</a></li>
+  
 </ol>
 <hr>
 <ol>
@@ -78,4 +80,24 @@ jQuery(document).ready(function() {
     <p>Da mesma maneira, os erros de predição para o faturamento acumulado para um período de 06 meses serão normalmente menores que os erros de predição para o faturamento da empresa em um mês específico.</p>
     <p>Portanto, é importante lembrar que, quanto maior a desagregação dos dados, maior é a sua volatilidade, e maiores os erros de predição. </p>
   </li>
+
+  <li id="7">
+    <p><strong>Como eliminar os separadores de milhar no meu arquivo de dados CSV?</strong></p>
+    <p>Caso os valores das séries no seu arquivo de dados CSV contenham separadores de milhar – <strong>o que não é permitido no Foresee</strong> – para eliminá-los, proceda da seguinte maneira:</p>
+    <div class="img-box">
+      <img src="images/faq/fig1.png"/>
+    </div>
+    <ol type="a">
+      <li>
+        Abra o arquivo CSV no Microsoft Excel® e selecione os valores contendo separadores de milhar.
+      </li>
+      <li>
+        Clique na aba “Página Inicial”.
+      </li>
+      <li>
+        Selecione - no centro superior da página - o formato “Número”.
+      </li>
+    </ol>
+      <p><strong>Pronto! Os separadores de milhar foram eliminados.</strong></p>
+      <div class="alert alert-info">Importante: Não se esqueça de salvar este arquivo no formato CSV!</div>
 </ol>
