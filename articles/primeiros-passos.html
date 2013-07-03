@@ -1,0 +1,112 @@
+---
+layout: page
+title: Primeiros passos no Foresee
+group: articles
+---
+{% include JB/setup %}
+
+<p>Para você se familiarizar com o aplicativo, vamos percorrer um pequeno exemplo
+do começo ao fim.</p>
+
+<p>Para isso, disponibilizamos um arquivo de dados do qual você vai precisar 
+mais à frente. Portanto, clique no link abaixo com o botão direito, clique
+em "Salvar link como...", e salve-o em alguma pasta de seu computador.</p>
+
+<blockquote>
+  <a href="https://s3.amazonaws.com/foresee/Vendas+Mensais.csv">Vendas
+    Mensais.csv</a>
+</blockquote>
+
+<section>
+<h4>Etapa 1: cadastre uma senha para sua conta.</h4>
+
+<p>Você recebeu um e-mail com o assunto "Bem vindo ao Foresee!", que contém um
+link para que você possa acessar sua conta e criar uma senha. Clique neste link
+e siga as instruções.</p>
+</section>
+
+<section>
+<h4>Etapa 2: acesse a sua página de projetos.</h4>
+
+<p>Para acessar sua página de projetos, basta acessar
+  <a href="https://app.fores.ee" target="_blank">https://app.fores.ee</a>.
+  Se você não estiver logado, o Foresee vai solicitar seu e-mail e senha.</p>
+</section>
+
+<section>
+<h4>Etapa 3: crie um novo projeto.</h4>
+
+<p>Criar um novo projeto é muito simples, basta clicar em "Novo projeto", um botão
+azul situado no lado superior direito da página de projetos, e preencher algumas
+informações:</p>
+
+<ul>
+  <li><strong>Nome do projeto:</strong> dê um nome para o seu projeto, por
+    exemplo, "Vendas Mensais".</li>
+  <li><strong>Arquivo de dados:</strong> é o arquivo com os dados históricos das
+   séries que deseja projetar. Selecione o arquivo que você salvou
+   anteriormente em seu computador.</li>
+  <li><strong>Intervalo de predição:</strong> é o nível de confiança da
+    projeção. Vamos falar sobre isso mais tarde. Inicialmente, deixe como está
+    (80%).</li>
+</ul>
+
+<p>Em seguida, clique em "Criar projeto". O projeto será salvo e você será
+redirecionado para a tela desse projeto. As projeções ainda não foram
+calculadas. Repare que o status do projeto é "Processando", e existe uma barra
+de progresso indicando o percentual das projeções que já foi calculado.</p>
+
+<p>Aguarde até que os cálculos terminem e a página ser atualizada, exibindo uma
+lista com as projeções contidas no projeto. Neste caso: Região I, Região II e
+Região III.</p>
+</section>
+
+<section>
+<h4>Etapa 4: acesse as projeções.</h4>
+
+<p>Para acessar cada uma das projeções, basta clicar no nome da projeção que
+deseja visualizar. Clique sobre "Região I".</p>
+
+<p>Você será levado à página dessa projeção. Nessa página é possível visualizar 
+o gráfico da projeção e também uma tabela, contendo os valores projetados. Mais 
+à frente vamos entender o que significa cada uma dessas colunas.</p>
+
+<div class="alert alert-info">
+  <strong>Dica:</strong> Use as setas para a direita e esquerda do seu teclado para navegar entre as projeões.
+</div>
+</section>
+
+<section>
+<h4>Etapa 5: exporte as projeções.</h4>
+
+<p>Se quiser salvar esses resultados no seu computador, ou mesmo compartilhá-los
+com outras pessoas da empresa, basta exportá-los em CSV ou PDF.</p>
+
+<p>Para fazer isso, retorne à página do projeto clicando sobre o nome do projeto
+(Vendas Mensais) na barra de navegação localizada acima do menu de navegação,
+como apresentado abaixo:</p>
+
+<div class="img-box">
+  <img src="images/first-steps/fig1.png"/>
+</div>
+
+<p>Para exportar <strong>todas as projeções contidas nesse projeto</strong>,
+  clique no link para o formato desejado - por exemplo, clique em PDF - ao lado
+  de "Projeções" no quadro de informações do projeto.</p>
+
+<div class="img-box">
+  <img src="images/first-steps/fig2.png"/>
+</div>
+
+<p>Para exportar <strong>uma projeção individual</strong>, localize-a na tabela
+  e clique no formato desejado apresentado na coluna Download. Por exemplo,
+  clique em CSV para exportar o arquivo CSV com os resultados da Região I.</p>
+</section>
+
+<div class="img-box">
+  <img src="images/first-steps/fig3.png"/>
+</div>
+</section>
+
+<p><strong>Parabéns! Você percorreu todas as etapas necessárias para criar e explorar um
+  projeto no Foresee.</strong></p>

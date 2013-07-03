@@ -1,0 +1,148 @@
+---
+layout: page
+title: How to understand forecasts?
+group: articles
+---
+{% include JB/setup %}
+
+<p>By examining a Foresee forecast graphic, you will notice that there are 03 other lines beyond the blue one - which represents the data history of the forecasted series - next to the graphic, on your right (see Fig. 1 below):</p>
+<ul>
+<li>01 green upper line</li>
+<li>01 yellow middle line</li>
+<li>01 red bottom line</li>
+</ul>
+
+<div class="img-box">
+  <img src="images/fig1.png"/>
+  <h5>Fig. 1</h5>
+</div>
+
+<p>It is important to understand the meaning of each line.</p>
+
+<p>Any sales expectation - regardless of the method employed - always has a certain level of uncertainty and the use of statistical forecasts is the best way available to deal with such uncertainty.</p>
+
+<p>Statistical forecasts represent future sales for a given period - for instance, one month - but not as one unique value - which would be extremely difficult because of the uncertainties. Actually, it would be <strong>a set of possible values, each one with a different probability to occur</strong>. That is simply a <strong>probability distribution</strong>.</p>
+
+<div class="img-box">
+  <img src="images/fig2.png" width="500"/>
+  <h5>Fig. 2</h5>
+</div>
+
+<p>The graphic above (Fig. 2) represents, by a probability distribution, the possible values of the revenue of a company for the month of January 2013.</p>
+
+<p>On the horizontal axis, there are different possible values for that month sales. On the other hand, the occurrence probability of each one of theses values is represented by the height of the "bell-shaped" curve above each value.</p>
+
+<p>If you take a look at the curve around R$ 570 thousand (measured by the length of the yellow stripe extended from the horizontal axis to the curve), you will notice that, at this point, the curve reaches its highest value, indicating that this is the <strong>most likely</strong> value for the revenue of that company in January. Notice that this isn't the only possible result, but the most likely one.</p>
+
+<p>This most likely value is what we call forecast.</p>
+
+<p>We can also notice at Fig. 2 that, as we move away from the "neighborhood" of R$ 570 thousand, both towards lower or higher values, the height of the curve becomes increasingly lower, showing increasingly lower probabilities, comparing to the forecast.</p>
+
+<p>Let's consider now that the probability of the revenue for January to be between R$ 500,000 (red stripe) and R$ 640,000 (green stripe) is 80%.</p>
+
+<p>This interval of R$ 500,000 and R$ 600,000 is what we call Prediction Interval. In this case, a Prediction Interval of 80% tells us that there is an 80% chance that a future observation will "fit" inside those limits.</p>
+
+<p>And that is exactly what the Foresee forecast plot represent by those 03 curves: a prediction interval, enclosed by the green and red curves, and a value forecast, indicated by the yellow curve.</p>
+
+<div class="img-box">
+  <img src="images/fig3.png"/>
+  <h5>Fig. 3</h5>
+</div>
+
+<p>The forecast graphic above (Fig. 3) was built by using a prediction interval of 80%.For January 2013 (1st forecasted month), the upper limit of the prediction interval is R$ 640,000 and the lower limit is R$ 500,000. The forecast value is R$ 570,000, which is the most likely value for the revenue of the company for January 2013.</p>
+
+<p>The prediction intervals provide us with very interesting "tips" (see Fig. 4 below).</p>
+
+<div class="img-box">
+  <img src="images/fig4.png"/>
+  <h5>Fig. 4</h5>
+</div>
+
+<p>In this example, the 80% forecast Interval tells us that:</p>
+<hr>
+<ol>
+<li>Close values of R$ 570,000 (a) - mid-range of the interval or forecast - are much more likely for the month of January than values closer to R$ 500,000 (b) or closer to R$ 640,000 (c).</li>
+<li>The probability of the observed value be below the forecast is 50% (d), as well as being above the forecast (e), since the forecasted value indicated the middle of a probability distribution which contains all possible values for the revenue for the month of January.</li>
+<li>The revenue of the company in January, within 80% certainty, should be between the lower limit (R$ 500 thousand) and the upper limit (R$ 640 thousand) of the prediction interval of 80% (f).</li>
+<li>The probability that the revenue comes below the lower limit - below the red stripe (R$ 500 thousand) - is only 10% (g).</li>
+<li>The probability that the revenue comes above the upper limit in January - above the green stripe (R$ 640 thousand) - is also only 10% (h).</li>
+<li>The probability that the revenue comes below the upper limit - below R$ 640 thousand - is 90% (i), since the probability of this value to be inside the interval is 80% and the probability of being below the lower limit is 10%. Therefore, these two probabilities must be added.</li>
+<li>The probability of the revenue to be above the lower limit of R$ 500 thousand is 90% (j), that is 80% probability of being inside the interval plus 10% probability of being above the upper limit of the interval.</li>
+</ol>
+<hr>
+
+<p>The table below shows the probabilities mentioned before, at (2), (3), (4), (5), (6), and (7) for the different types of Prediction Interval (70%, 80%, or 90%), which you can select when creating the forecasts with Foresee:</p>
+
+<div class="img-box">
+
+<table class="table table-striped table-bordered">
+  <thead>
+    <tr>
+      <th rowspan="2">Nível de Confiança do Intervalo de Predição</th>
+      <th colspan="6">Probabilidade de o valor observado ficar:</th>
+    </tr>
+    <tr>
+      <th>Acima ou abaixo da projeção (2)</th>
+      <th>Dentro do intervalo (3)</th>
+      <th>Abaixo do limite inferior do intervalo (4)</th>
+      <th>Acima do limite superior do intervalo (5)</th>
+      <th>Abaixo do limite superior do intervalo (6)</th>
+      <th>Acima do limite inferior do intervalo (7)</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><strong>70%</strong></td>
+      <td>50%</td>
+      <td>70%</td>
+      <td>15%</td>
+      <td>15%</td>
+      <td>85%</td>
+      <td>85%</td>
+    </tr>
+    <tr>
+      <td><strong>80%</strong></td>
+      <td>50%</td>
+      <td>80%</td>
+      <td>10%</td>
+      <td>10%</td>
+      <td>90%</td>
+      <td>90%</td>
+    </tr>
+    <tr>
+      <td><strong>90%</strong></td>
+      <td>50%</td>
+      <td>90%</td>
+      <td>5%</td>
+      <td>5%</td>
+      <td>95%</td>
+      <td>95%</td>
+    </tr>
+  </tbody>
+</table>
+<h5>Fig. 5</h5>
+</div>
+
+<p>Notice that, for a certain prediction interval, for instance, 80% interval, the associated probabilities to the interval limits will always be the same, according to the table above. What will change are the values that define the upper and lower limits of the interval for each forecast series and period.</p>
+
+<section>
+<h3>Table with forecasted values</h3>
+
+<p>By examining a forecast created by Foresee, you will see that there is also a table presented right below the graphic.</p>
+
+<p>It is extremely easy to understand the table, for what it indicates are the forecast values, as well as the upper and lower limits of the prediction interval.</p>
+
+<p>Moreover, the table also brings the accrued value of the forecasts, which always appear on the column at your right.</p>
+<hr>
+<ol>
+<li>The forecasted period</li>
+<li>The lower limit of the interval of forecast</li>
+<li>The value of the forecast or the most likely value</li>
+<li>The upper limit of the interval of forecast</li>
+<li>The accrued value of the forecasts</li>
+</ol>
+<hr>
+<p>At the example above, the history data that was provided in order to calculate the forecasts were available until August 2012, which means that the forecasts were calculated thence forward, from September 2012 and on.</p>
+
+<p>Warning! If the company wishes to know, in this example, what were the forecasted value for its sales from September 2012 (1st forecasted period) until the end of the year, it is only necessary to examine the accrued value of the forecasts until December 2012, which, in this case, was R$ 2,406,368.</p>
+</section>

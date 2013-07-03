@@ -1,0 +1,14 @@
+---
+layout: page
+title: Articles 
+header: Articles
+group: navigation
+---
+{% include JB/setup %}
+
+<h2>All Articles</h2>
+<ul>
+{% assign pages_list = site.pages %}
+{% assign group = 'articles' %}
+{% include JB/pages_list %}
+</ul>

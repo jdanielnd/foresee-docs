@@ -1,4 +1,27 @@
 /* Custom container */
+@import url(http://fonts.googleapis.com/css?family=Open+Sans:300,400);
+
+body {
+  padding: 80px;
+  background-color: #F5F5F5;
+  line-height: 1.6em;
+  color: #333;
+  font: 15px/1.4 helvetica,arial,freesans,clean,sans-serif;
+}
+
+section {
+  margin: 30px auto;
+}
+
+h1 {
+  font-family: "Open Sans", sans-serif;
+  font-weight: 300;
+}
+
+li {
+  margin-bottom: 5px;
+}
+
 .container-narrow {
   margin: 0 auto;
   max-width: 700px; }
@@ -62,4 +85,82 @@
 .tag_box a.active {
   background: #57A957;
   border: 1px solid #4c964d;
-  color: #FFF; }
+  color: #FFF;
+}
+
+.navbar-inner {
+  background-color: #181818;
+  background-image: linear-gradient(to bottom, #111111, #222222);
+}
+
+.navbar-fixed-top .brand {
+  color: #FFF;
+  font-weight: bold;
+  text-shadow: 0 1px 0 rgba(255, 255, 255, 0.1), 0 0 30px rgba(255, 255, 255, 0.125);
+  padding: 15px 20px;  
+}
+
+.navbar-fixed-top .brand span {
+  color: #049CDB;
+}
+
+.navbar .nav > li > a {
+  color: #FFFFFF;
+  float: none;
+  padding: 15px;
+  text-decoration: none;
+  text-shadow: 0 1px 0 #111111;
+}
+
+ul.nav {
+  margin-top: 20px;
+}
+
+ul.nav ul li a:hover {
+  text-decoration: none;
+}
+
+ul.nav ul li:hover {
+  background-color: #EEE;
+}
+
+.well {
+  background: #fefefe;
+}
+
+.page-text {
+  margin: auto 20px;
+}
+
+.p {
+  margin: 1em 0;
+}
+
+.img-box h5 {
+  text-align: center;
+}
+
+hr {
+  margin: 2em 0;
+}
+
+.img-box {
+  margin: 2em 0;
+}
+
+.img-box img {
+  display: block;
+  margin: auto;
+}
+
+ol li {
+  margin: 1em 0;
+}
+
+.table td, .table thead th {
+  vertical-align: middle;
+  text-align: center
+}
+.table th {
+  font-weight: 300;
+}

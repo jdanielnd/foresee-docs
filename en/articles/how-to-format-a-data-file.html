@@ -1,0 +1,252 @@
+---
+layout: page
+title: How to format a data file?
+group: articles
+---
+{% include JB/setup %}
+
+<p>To generate forecasts you must first transfer to Foresee the historical data of the series that you wish to project. This transfer is made using a <strong>CSV data file</strong>.</p>
+
+<p>This file can easily be created from a Microsoft Excel ® spreadsheet. Once the dates and values ​​of the series that you wish to project are correctly entered on this worksheet, simply click (while in Excel) on <strong>File > Save as ... ></strong>, then select the option CSV.</p>
+
+<div class="img-box">
+  <img src="images/csv.png"/>
+</div>
+
+<p>After loading the data file in Foresee, the whole process is automated, and the forecasts are generated in approximately 1 minute.</p>
+
+<p>It is critical, however, that you format your file correctly, and there are 10 steps that must be followed. They are presented below:</p>
+
+<ol>
+  <li>
+    <p><strong>File Structure</strong></p>
+    <ol type="a">
+      <li>The first line should contain the header with the title of the columns arranged below it.</li>
+      <li>The first column should contain the dates of the values ​​of the series histories.</li>
+      <li>The following columns (column 2 onwards) should contain the values ​​of the series history you wish to project (see illustration below).</li>
+      <div class="img-box">
+        <img src="images/format/fig1.png"/>
+      </div>
+    </ol>
+  </li>
+
+  <li>
+    <p><strong>Formatting of 1st line or header</strong></p>
+    <p>The formatting of column headings - or header - is quite flexible.</p>
+    <p>You can use uppercase or lowercase letters - with accent signs graphics when needed - as well as numbers, spaces, periods, hyphens, and subscripts.</p>
+    <p>It is important to note that it is not possible to create two or more series histories with the same name within the same data file.</p>
+  </li>
+
+  <li>
+    <p><strong>Formatting the series history</strong></p>
+
+    <p>The series history can represent:</p>
+      <ol type="a">
+        <li><strong>Monetary values​​</strong>: for example, the value of the monthly billing.</li>
+        <li><strong>Quantities</strong>: for example, the monthly quantity sold for item "xyz".</li>
+        <li><strong>Percentage</strong>: for example, monthly margin contribution.</li>
+      </ol>
+
+    <p>In all these cases the series:</p>
+      <ol type="a">
+        <li>Must contain only numeric values​​.</li>
+        <li>May contain comma or decimal separator.</li>
+        <li>Cannot contain any thousands separator.</li>
+        <li>Cannot contain any symbols such as £, US$, %, etc..</li>
+      </ol>
+
+    <p>When expressing percentage range, the data must be represented as decimal numbers, for example, as 0.134 or 0.625, and not 13.4% or 62.5%.</p>
+  </li>
+
+  <li>
+    <p><strong>Formatting dates in the CSV data file</strong></p>
+
+    <p>Dates should always include a day, a month and a year. Foresee recognizes 4 different date formats.</p>
+
+    <p>For example, to represent June 30, 2010, you can use any one of the following formats:</p>
+
+    <div class="img-box">
+      <table class="table table-striped table-bordered">
+        <thead>
+          <th>Format</th>
+          <th>Date</th>
+        </thead>
+        <tbody>
+          <tr>
+            <td>DD/MM/YYYY</td>
+            <td>30/06/2010</td>
+          </tr>
+          <tr>
+            <td>MM/DD/YYYY</td>
+            <td>06/30/2010</td>
+          </tr>
+          <tr>
+            <td>DD/MM/YY</td>
+            <td>30/06/10</td>
+          </tr>
+          <tr>
+            <td>MM/DD/YY</td>
+            <td>06/30/10</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </li>
+
+  <li>
+    <p><strong>Formatting dates in Foresee</strong></p>
+
+    <p>For dates reported in the data file to be interpreted correctly, it is necessary to let Foresee know which date format you'll be working with before loading the file.</p>
+
+    <p>By clicking <strong>Settings > Date format</strong> (see picture below), you can select the format you wish to work with.</p>
+
+    <p>This data configuration is saved in your profile, so you only need to repeat this procedure if you want to load a data file with a new date format.</p>
+  </li>
+
+  <li>
+    <p><strong>Series frequency</strong>
+
+    <p>Foresee allows you to work with monthly, quarterly, semiannual or annual data.</p>
+
+    <p>To represent any of these periods (month, quarter, semester, or year), you can refer (a) to the beginning of the period or, if you prefer, (b) to the end of the period.</p>
+
+    <p>Foresee will work both ways. You can use either of these two criteria, as long as it is maintained consistently throughout the series.</p>
+
+    <p>The table below shows the two options available for representing months, quarters, semesters or years.</p>
+
+    <div class="img-box">
+      <table class="table table-striped table-bordered">
+        <thead>
+          <th>Frequência dos dados</th>
+          <th>Período que queremos representar</th>
+          <th>Opção 1<br>
+            <small>Referência ao ponto inicial dos períodos</small></th>
+          <th>Opção 2<br>
+            <small>Referência ao ponto final dos períodos</small></th>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Mensal</td>
+            <td>Janeiro, Fevereiro e Março de 2013</td>
+            <td>01/01/2013<br>
+              01/02/2013<br>
+              01/03/2013</td>
+            <td>31/01/2013<br>
+              28/02/2013<br>
+              31/03/2013</td>
+          </tr>
+          <tr>
+            <td>Trimestral</td>
+            <td>1º, 2º e 3º trimestres de 2013</td>
+            <td>01/01/2013<br>
+              01/04/2013<br>
+              01/07/2013</td>
+            <td>31/03/2013<br>
+              30/06/2013<br>
+              30/09/2013
+            </td>
+          </tr>
+          <tr>
+            <td>Semestral</td>
+            <td>1º e 2º semestres de 2013 e 1º semestre de 2014</td>
+            <td>01/01/2013<br>
+              01/07/2013<br>
+              01/01/2014</td>
+            <td>30/06/2013<br>
+              31/12/2013<br>
+              30/06/2014</td>
+          </tr>
+          <tr>
+            <td>Anual</td>
+            <td>Anos de 2013, 2014 e 2015</td>
+            <td>01/01/2013<br>
+              01/01/2014<br>
+              01/01/2015</td>
+            <td>31/12/2013<br>
+              31/12/2014<br>
+              31/12/2015</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <p>As indicated in the table above, in order to represent, for example, the months of January, February and March of 2013, you can use 01/01/2013, 01/02/2013 and 01/03/2013, referring to the beginning of these periods.</p>
+
+    <p>Alternatively, you can also express these months by referring to the end of the period, i.e., 31/01/2013, 28/02/2013 and 31/03/2013.</p>
+
+    <p>Both of these forms for representing time periods will work with Foresee. In both cases it will understand that you are referring to the months of January, February and March, whether the reference is made to the beginning or end of the period, as long as the criterion adopted is consistent throughout the series.</p>
+
+    <p>Similarly, to refer to the 1st, 2nd and 3rd quarters of 2013, you may refer to the beginning of the quarters (01/01/2013, 01/04/2013 and 01/07/2013) or if you prefer, you can refer to the end of the quarter (31/03/2013, 30/06/2013 and 30/09/2013).</p>
+
+    <p>In both cases, Foresee will understand that you are referring to the 1st, 2nd and 3rd quarters of 2013.</p>
+
+    <div class="alert alert-info"><strong>Pro tip:</strong> If you always choose to work with the starting point of the period, you won't have to ask yourself, "what was the last day of each period" (28, 29, 30 or 31?). You will always use the 1st day of the month when dealing with monthly data, or the 1st day of the starting month of each period, when dealing with quarterly, semi-annual or annual data.</div>
+  </li>
+
+  <li>
+    <p><strong>Minimum and maximum size of the series</strong></p>
+    <ol type="a">
+      <li>
+        <p><strong>Minimum number of periods</strong></p>
+
+        <p>For Foresee to be able to project the values ​​of a number, it needs to have access to a history with at least 5 periods from this series - 5 months, 5 quarters, 5 semesters or 5 years, for monthly, quarterly, semiannual or annual data respectively.</p>
+
+        <p>However, it is important to remember that the greater the number of periods, i.e., the longer the history of the data, the better the forecasts will be.</p>
+      </li>
+      <li>
+        <p><strong>Seasonality and minimum number of periods</strong></p>
+
+        <p>For Foresee to be able to detect the seasonality of a series, it needs to have access to at least 2 full years of information (24 months, 8 quarters, etc.).</p>
+
+        <p>This does not mean that you cannot generate forecasts with less than 24 months or fewer than 8 quarters. If the projected series do not show seasonality, this will have no major effect on the quality of the forecasts.</p>
+
+        <p>However, if the series you are projecting show an important seasonality, it will not be represented in the forecasts, which means larger prediction errors.</p>
+
+        <p>This does not apply to annual data, since these do not exhibit seasonality.</p>
+      </li>
+      <li>
+        <p><strong>Maximum number of periods</strong></p>
+
+        <p>Foresee allows you to load data files with series composed of up to 120 periods (120 months, 120 quarters, etc..).</p>
+
+        <p>This does not mean that you have to work with this large of a number of periods in order to generate good quality forecasts.</p>
+
+        <p>If your data are monthly, for example, you can generate good quality forecasts by working with a history of 48 or even 24 months.</p>
+
+        <p>Nevertheless, it is important to emphasize that the quality of the forecasts will improve as you increase the number of periods, i.e., the number of observations.</p>
+      </li>
+      <li>
+        <p><strong>Maximum number of series in a single data file</strong></p>
+
+        <p>Foresee allows you to load data files containing up to 20 different series each time.</p>
+
+        <p>The forecasts for these series are calculated simultaneously, and will be saved within the same project on Foresee.<p>
+
+        <p>This does not mean that you can only generate 20 forecasts. In fact you can generate as many forecasts as you would like. But each data file, and consequently, each project may not contain more than 20 different series.</p>
+      </li>
+    </ol>
+  <li>
+    <p><strong>The series that comprise a single data file must have the same frequency and must occur at the same time.</strong></p>
+
+    <p>A data file with different sets share a single column of dates. This means that these series:</p>
+    <ol type="a">  
+      <li>Must have the same frequency, be it monthly, quarterly, half-yearly or yearly.</li>
+      <li>Must all begin during the same period.</li>
+      <li>Must all end at during the same period.</li>
+      <li>Must all have the same size or the same number of periods.</li>
+    </ol>
+  </li>
+  <li>
+    <p><strong>"Missing" data ​​and "zero" values</strong></p>
+
+    <p>"Missing data" is shown when no record of a particular piece of data exists. This can occur, for example, when a company wants to project the sales of a particular product, but does not have the number of units sold for this product in a given month, which should be included in the series history.</p>
+
+    <p>Foresee cannot generate this forecast because there is a "missing value" or "gap" in the series history. The series must be complete, with no "missing" values ​​or periods.</p>
+
+    <p>Note that this is different from a value equal to "zero".</p>
+
+    <p>This happens in a given month if a product's sales have been zero, i.e., the company did not sell any units of that product.</p>
+
+    <p>This value should be reported in the series history as "0" (zero), and not as a blank field or "missing value".</p>
+  </li>
+</ol>

@@ -1,0 +1,229 @@
+---
+layout: page
+title: Como formatar um arquivo de dados?
+group: articles
+---
+{% include JB/setup %}
+
+<p>Para gerar projeções é necessário transferir para o Foresee os dados históricos das séries que você deseja projetar. E essa transferência é feita através de um <strong>arquivo de dados “CSV”</strong>.</p>
+
+<p>Este arquivo pode ser facilmente criado a partir de uma planilha Microsoft Excel ®. Assim que as datas e os valores das séries que você deseja projetar estiverem corretamente inseridos nessa planilha, basta clicar (dentro do Excel) em <strong>Arquivo > Salvar Como ></strong> e selecionar a opção <strong>CSV</strong>.</p>
+
+<div class="img-box">
+  <img src="images/csv.png"/>
+</div>
+
+<p>Após carregar o arquivo de dados no Foresee, todo o processo é automatizado, e as projeções são geradas em aproximadamente 01 minuto.</p>
+
+<p>Entretanto, é fundamental que este arquivo esteja corretamente formatado, e para isso existem <strong>10 pontos</strong> que precisam ser observados, os quais são apresentados abaixo:</p>
+
+<ol>
+  <li>
+    <p><strong>Estrutura do arquivo</strong></p>
+    <ol type="a">
+      <li>A primeira linha deve conter o cabeçalho com o título das colunas dispostas abaixo dele.</li>
+      <li>A primeira coluna deve conter as datas dos valores das séries históricas.</li>
+      <li>As colunas seguintes (2ª coluna em diante) devem conter os valores das séries históricas que você deseja projetar (ver ilustração abaixo).</li>
+      <div class="img-box">
+        <img src="images/format/fig1.png"/>
+      </div>
+    </ol>
+  </li>
+  <li>
+    <p><strong>Formatação da 1ª linha ou cabeçalho</strong></p>
+    <p>A formatação dos títulos das colunas - ou cabeçalho - é bastante flexível.</p>
+    <p>Você pode utilizar letras maiúsculas ou minúsculas - com sinais de acentuação gráfica, quando necessário – além de números, espaços em branco, ponto, hífen e subscrito.</p>
+    <p>É importante observar que não é permitido criar duas ou mais séries históricas com o mesmo nome, dentro de um mesmo arquivo de dados. </p>
+  </li>
+  <li>
+    <p><strong>Formatação das séries históricas</strong></p>
+    <p>As séries históricas podem representar:</p>
+    <ol type="a">
+      <li><strong>Valores monetários</strong>: por exemplo, valor do faturamento mensal.</li>
+      <li><strong>Quantidades</strong>: por exemplo, quantidade vendida mensalmente do item “xyz”.</li>
+      <li><strong>Percentuais</strong>: por exemplo, margem mensal de contribuição.</li>
+    </ol>
+    <p>Em todos esses casos as séries:</p>
+    <ol type="a">
+      <li>Devem conter apenas valores numéricos.</li>
+      <li>Podem conter vírgula ou ponto como separador decimal.</li>
+      <li>Não podem conter nenhum tipo de separador de milhar.</li>
+      <li>Não podem conter nenhum símbolo, como R$, US$, %, etc.</li>
+    </ol>
+    <p>No caso da série expressar percentuais, os mesmos devem ser representados como números decimais, por exemplo, 0,134 ou 0,625, e não 13,4% ou 62,5%.</p>
+  </li>
+  <li>
+    <p><strong>Formatação das datas no arquivo de dados “CSV”</strong></p>
+    <p>As datas devem ser sempre compostas de dia, mês e ano. O Foresee reconhece 04 formatos diferentes de data.</p>
+    <p>Por exemplo, para representar o dia 30 de junho de 2010, você poderá usar qualquer um dos seguintes formatos:</p>
+
+    <div class="img-box">
+      <table class="table table-striped table-bordered">
+        <thead>
+          <th>Formato</th>
+          <th>Data</th>
+        </thead>
+        <tbody>
+          <tr>
+            <td>DD/MM/AAAA</td>
+            <td>30/06/2010</td>
+          </tr>
+          <tr>
+            <td>MM/DD/AAAA</td>
+            <td>06/30/2010</td>
+          </tr>
+          <tr>
+            <td>DD/MM/AA</td>
+            <td>30/06/10</td>
+          </tr>
+          <tr>
+            <td>MM/DD/AA</td>
+            <td>06/30/10</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </li>
+  <li>
+    <p><strong>Formatação das datas no Foresee</strong></p>
+    <p>Para que as datas reportadas no arquivo de dados possam ser interpretadas corretamente, <strong>antes</strong> de carregar esse arquivo é necessário “dizer” ao Foresee com qual formato de datas você vai trabalhar.</p>
+
+    <p>Clicando em <strong>Configurações  >  Formato de data</strong> (ver imagem abaixo), você pode selecionar o formato com o qual deseja trabalhar. </p>
+    <div class="img-box">
+      <img src="images/format/fig2.png"/>
+    </div>
+    <p>Essa configuração de data fica registrada em seu perfil, de maneira que você só precisará repetir esse procedimento caso queira carregar um arquivo de dados com um <strong>novo</strong> formato de data.</p>
+  </li>
+  <li>
+    <p><strong>Frequência das séries</strong></p>
+    <p>O Foresee permite que você trabalhe com dados <strong>mensais</strong>, <strong>trimestrais</strong>, <strong>semestrais</strong> ou <strong>anuais</strong>.</p>
+    <p>Para representar qualquer um desses períodos (mês, trimestre, semestre, ou ano), você pode fazer referência <strong>(a) ao início do período</strong> ou, se preferir, <strong>(b) ao final do período</strong>.</p>
+    <p><strong>Isso é indiferente para o Foresee</strong>. Você pode usar qualquer um desses dois critérios, desde que ele seja <strong>consistentemente</strong> mantido ao longo de toda a série.</p>
+    <p>A tabela abaixo exemplifica as duas opções disponíveis para representar meses, trimestres, semestres ou anos.</p>
+
+    <div class="img-box">
+      <table class="table table-striped table-bordered">
+        <thead>
+          <th>Frequência dos dados</th>
+          <th>Período que queremos representar</th>
+          <th>Opção 1<br>
+            <small>Referência ao ponto inicial dos períodos</small></th>
+          <th>Opção 2<br>
+            <small>Referência ao ponto final dos períodos</small></th>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Mensal</td>
+            <td>Janeiro, Fevereiro e Março de 2013</td>
+            <td>01/01/2013<br>
+              01/02/2013<br>
+              01/03/2013</td>
+            <td>31/01/2013<br>
+              28/02/2013<br>
+              31/03/2013</td>
+          </tr>
+          <tr>
+            <td>Trimestral</td>
+            <td>1º, 2º e 3º trimestres de 2013</td>
+            <td>01/01/2013<br>
+              01/04/2013<br>
+              01/07/2013</td>
+            <td>31/03/2013<br>
+              30/06/2013<br>
+              30/09/2013
+            </td>
+          </tr>
+          <tr>
+            <td>Semestral</td>
+            <td>1º e 2º semestres de 2013 e 1º semestre de 2014</td>
+            <td>01/01/2013<br>
+              01/07/2013<br>
+              01/01/2014</td>
+            <td>30/06/2013<br>
+              31/12/2013<br>
+              30/06/2014</td>
+          </tr>
+          <tr>
+            <td>Anual</td>
+            <td>Anos de 2013, 2014 e 2015</td>
+            <td>01/01/2013<br>
+              01/01/2014<br>
+              01/01/2015</td>
+            <td>31/12/2013<br>
+              31/12/2014<br>
+              31/12/2015</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <p>Como indicado na tabela acima, para representar, por exemplo, os meses de janeiro, fevereiro e março de 2013, você pode utilizar 01/01/2013, 01/02/2013 e 01/03/2013, fazendo referência ao início desses períodos. </p>
+    <p>Alternativamente, você pode também expressar esses meses fazendo referência ao final dos períodos, ou seja, 31/01/2013, 28/02/2013 e 31/03/2013.</p>
+    <p>Essas duas formas de representação dos períodos são <strong>indiferentes para o Foresee</strong>. Nos dois casos ele vai entender que você está se referindo aos meses de janeiro, fevereiro e março, não importando se a referência é feita ao início ou ao final do período, desde que o critério adotado seja consistente ao longo de toda a série.</p>
+    <p>Da mesma forma, para se referir ao 1º, 2º e 3º trimestres de 2013, você pode fazer referência ao <strong>início dos trimestres</strong> (01/01/2013, 01/04/2013 e 01/07/2013) ou, se preferir, pode fazer referência ao <strong>final dos trimestres</strong> (31/03/2013, 30/06/2013 e 30/09/2013).</p>
+    <p>Em ambos os casos, o Foresee vai entender que você está reportando o 1º, 2º e 3º trimestres de 2013.</p>
+    <div class="alert alert-info"><strong>Dica</strong>: Se você optar por trabalhar sempre com o <strong>ponto inicial dos períodos</strong>, não terá de se preocupar com “qual foi o último dia de cada período” (dia 28, 29, 30 ou 31?). Vai utilizar sempre o 1º dia do mês, no caso de dados mensais, ou o 1º dia do mês inicial de cada período, no caso de dados trimestrais, semestrais ou anuais.</div>
+  </li>
+  <li>
+    <p><strong>Tamanho mínimo e máximo das séries</strong></p>
+    <ol type="a">
+      <li>
+        <p><strong>Número mínimo de períodos</strong></p>
+        <p>Para que o Foresee possa projetar os valores de uma série, é necessário que ele disponha de um histórico com pelo menos 05 períodos desta série – 05 meses, 05 trimestres, 05 semestres ou 05 anos, para dados respectivamente mensais, trimestrais, semestrais ou anuais.</p>
+        <p>Entretanto, é importante lembrar que quanto maior for o número de períodos, ou seja, quanto mais longo for o histórico dos dados, tanto melhores serão as projeções.</p>
+      </li>
+      <li>
+        <p><strong>Sazonalidade e número mínimo de períodos</strong></p>
+
+        <p>Para que o Foresee possa detectar a sazonalidade de uma série é necessário que ele disponha de, <strong>no mínimo, 02 anos completos de informação</strong> (24 meses, 08 trimestres, etc.). </p>
+
+        <p>Isto não significa que você não possa gerar projeções com menos de 24 meses ou com menos de 08 trimestres.  Se as séries projetadas não apresentarem sazonalidade, isso não terá nenhum efeito importante sobre a qualidade das projeções. </p>
+
+        <p>Entretanto, se as séries que você estiver projetando apresentarem uma sazonalidade importante, ela não vai estar representada nas projeções, o que significa erros de predição maiores.</p>
+
+        <p>Isto não se aplica a dados anuais, uma vez que esses não apresentam sazonalidade.</p>
+      </li>
+      <li>
+        <p><strong>Número máximo de períodos</strong></p>
+
+        <p>O Foresee permite que você carregue arquivos de dados com séries compostas de até 120 períodos (120 meses, 120 trimestres, etc.).</p>
+
+        <p>Isto não significa que para gerar projeções de boa qualidade você tenha que trabalhar com um número tão elevado de períodos quanto esse.</p>
+
+        <p>Se seus dados forem mensais, por exemplo, é possível gerar projeções de boa qualidade trabalhando com um histórico de 48 ou mesmo de 24 meses.</p>
+
+        <p>Contudo, é importante enfatizar que a qualidade das projeções melhora à medida que aumentamos o número de períodos, isto é, de observações.</p>
+      </li>
+    </ol>
+  </li>
+  <li>
+    <p><strong>Número máximo de séries em um mesmo arquivo de dados</strong>
+    <p>O Foresee permite que você carregue arquivos de dados contendo até 20 séries diferentes de cada vez.</p>
+
+    <p>As projeções para essas séries serão calculadas simultaneamente, e ficarão arquivadas dentro de um mesmo projeto no Foresee.</p>
+
+    <p>Isto não quer dizer que você só possa gerar 20 projeções. Na realidade pode gerar quantas projeções quiser. Mas cada arquivo de dados, e consequentemente, cada projeto, não poderá conter mais do que 20 séries diferentes.</p>
+  </li>
+  <li>
+    <p><strong>As séries que compõem um mesmo arquivo de dados devem ter a mesma frequência e serem coincidentes no tempo</strong></p>
+
+    <p>Num arquivo de dados as diferentes séries compartilham uma única coluna de datas. Isto significa que essas séries:</p>
+    <ol type="a">
+      <li>Devem ter a mesma frequência, seja ela mensal, trimestral, semestral ou anual.</li>
+      <li>Devem começar, todas elas, no mesmo período.</li>
+      <li>Devem terminar, todas elas, no mesmo período.</li>
+      <li>Devem ter o mesmo tamanho, ou seja, o mesmo número de períodos.</li>
+    </ol>
+  </li>
+  <li>
+    <p><strong>Dados “faltantes” e valores “zerados”</strong></p>
+    <p>Um “dado faltante” é um dado para o qual não existe registro. Digamos que a empresa queira projetar as vendas de um determinado produto, mas não disponha do número de unidades vendidas desse produto num determinado mês, que deveria estar incluído na série histórica.</p>
+
+    <p>O Foresee não consegue gerar essa projeção por haver um “valor faltante” ou uma “lacuna” na série histórica. As séries precisam ser completas, sem valores ou períodos "faltantes".</p>
+
+    <p>Observe que isso é diferente de um valor igual a “zero”.</p>
+
+    <p>Digamos que num determinado mês a venda de um produto tenha sido zero, ou seja, a empresa não vendeu nenhuma unidade daquele produto.</p>
+
+    <p>Esse valor deve ser reportado na série histórica como “0” (número zero), e não como um campo em branco ou "valor faltante"</p>
+  </li>
+</ol>
