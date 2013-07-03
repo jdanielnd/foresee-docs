@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
   <head>
     <meta charset="utf-8">
     <title>{{ page.title }}</title>
@@ -51,29 +51,8 @@
           <div class="offset1 span10 well">
             <div class="row">
               <div class="span3">
-                  <ul class="nav nav-list">
-                    <li><a href="/index.html">Seja bem vindo!</a></li>
-                    <li class="nav-header">Guias de uso</li>
-                    <li><a href="/articles/primeiros-passos.html">Primeiros passos</a></li>
-                    <li><a href="/articles/como-formatar-um-arquivo-de-dados.html">Como formatar um arquivo de dados?</a></li>
-                    <li><a href="/articles/como-gerar-projecoes.html">Como gerar projeções com o Foresee?</a></li>
-                    <li><a href="/articles/como-exportar-as-projecoes.html">Como exportar as projeções?</a></li>
-                    <li><a href="/articles/como-o-foresee-pode-ajudar.html">Como o Foresee pode ajudar a sua empresa?</a>
-                      <ul>
-                        <li><a href="/articles/gestao-de-vendas.html">Gestão de Vendas</a></li>
-                        <li><a href="/articles/planejamento-de-producao-e-compras.html">Planejamento de Produção e Compras</a></li>
-                      </ul>
-                    </li>
-                    <li class="nav-header">Conceitos básicos</li>
-                    <li><a href="/articles/por-que-projetar-vendas.html">Por que projetar vendas?</a></li>
-                    <li><a href="/articles/por-que-utilizar-projecoes-estatisticas.html">Por que utilizar
-                      projeções estatísticas?</a></li>
-                    <li><a href="/articles/como-interpretar-projecoes.html">Como interpretar projeções?</a></li>
-                    <li class="nav-header">Suporte</li>
-                    <li><a href="/articles/faq.html">FAQ</a></li>
-                    <li><a href="mailto:suporte@fores.ee">suporte@fores.ee</a></li>
-                  </ul>
-                </div>
+                {% include menu %}
+              </div>
               <div class="span6">
                 {{ content }}
               </div>

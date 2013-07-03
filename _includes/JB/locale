@@ -1,0 +1,11 @@
+{% capture locale %}
+  {{ page.url | truncate: 3, "" | remove: "/" }}
+{% endcapture %}
+
+{% assign locale_var = locale %}
+
+{% if locale contains "en" %}
+  {% assign menu = "themes/twitter/menu_en.html" %}
+{% else %}
+  {% assign menu = "themes/twitter/menu_pt.html" %}
+{% endif %}

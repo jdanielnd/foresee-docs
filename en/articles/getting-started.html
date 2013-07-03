@@ -1,0 +1,81 @@
+---
+layout: page
+title: Getting started
+---
+{% include JB/setup %}
+
+<p>To familiarize yourself with the application, let's do a little example project from beginning to end.</p>
+
+<p>We have provided a data file which you will need later. Right click the link below, click 'Save link as ...' and save it to any folder on your computer.</p>
+
+<blockquote>
+  <a href="https://s3.amazonaws.com/foresee/Vendas+Mensais.csv">Monthly sales 2013.csv</a>
+</blockquote>
+
+<section>
+<h4>Step 1: Register a password for your account.</h4>
+
+<p>You received an email with the subject "Welcome to Foresee", which contains a link enabling you to access your account and create a password. Click this link and follow the instructions.</p>
+</section>
+
+<section>
+<h4>Step 2: Go to your Project page.</h4>
+
+<p>To access your Projects page, simply go to <a href="https://app.fores.ee">https://app.fores.ee</a>. If you're not logged in, Foresee will ask for your email and password.</p>
+</section>
+
+<section>
+<h4>Step 3: Create a New Project.</h4>
+
+<p>Creating a new project is very simple; just click on the blue 'New project' button located on the upper right of the project page, and fill in the requested information:</p>
+
+<ul>
+  <li><strong>Project Name:</strong> give a name to your project, for example, "Monthly Sales".</li>
+
+  <li><strong>Data file:</strong> this is the file containing the historical data series you want to project. For this example, select the file that you saved previously to your computer.</li>
+
+  <li><strong>Prediction interval:</strong> this is the confidence level of the forecast. We’ll get into this in more detail later. For now, leave it as is (80%).</li>
+</ul>
+
+<p>Next, click 'Create project'. The project will be saved and you will be redirected to the window for this project. The forecasts have not yet been calculated. Note that the status of the project is 'Processing', and there is a progress bar indicating the percentage of the forecasts that have been calculated.</p>
+
+<p>Wait until Foresee finishes the calculations and the page refreshes, displaying a list of the forecasts contained in the project. In this case: Region I, Region II and Region III.</p>
+</section>
+
+<section>
+<h4>Step 4: Go to the forecasts.</h4>
+
+<p>To access each of the forecasts, just click on the name of the forecast you would like to view. For example, click on "Region I".</p>
+
+<p>You will be taken to the page for the “Region I” forecast. On this page you can view the graph forecast and also a table containing the projected values. Later we’ll explain more about what each of these columns represents.</p>
+
+<div class="alert alert-info">
+  <strong>Pro tip:</strong> Use the left and right arrows from your keyboard to navigate through the forecasts.
+</div>
+</section>
+
+<section>
+<h4>Step 5: Export the forecasts.</h4>
+
+<p>If you want to save these results on your computer, or share them with others in the company, you may export them as CSV or PDF files.</p>
+
+<p>To do this, return to the project page by clicking on the project name (Monthly Sales) in the navigation bar located above the navigation menu, as shown below:</p>
+
+<div class="img-box">
+  <img src="images/first-steps/fig1.png"/>
+</div>
+
+<p>To export all the forecasts contained in the current project, click the link for the desired format - for example, click PDF - beside "forecasts" in the project information area.</p>
+
+<div class="img-box">
+  <img src="images/first-steps/fig2.png"/>
+</div>
+
+<p>To export a single forecast, locate it in the table and click the desired format displayed in the 'Download' column. For example, click CSV to export the CSV file containing the results of Region I.</p>
+
+<div class="img-box">
+  <img src="images/first-steps/fig3.png"/>
+</div>
+</section>
+
+<p><strong>Congratulations! You have completed all the steps necessary to create and utilize a project in Foresee.</strong></p>
