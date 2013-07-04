@@ -78,16 +78,16 @@ group: articles
 <table class="table table-striped table-bordered">
   <thead>
     <tr>
-      <th rowspan="2">Nível de Confiança do Intervalo de Predição</th>
-      <th colspan="6">Probabilidade de o valor observado ficar:</th>
+      <th rowspan="2">Confidence Level of the Prediction Interval</th>
+      <th colspan="6">Probability that the observerved value will be:</th>
     </tr>
     <tr>
-      <th>Acima ou abaixo da projeção (2)</th>
-      <th>Dentro do intervalo (3)</th>
-      <th>Abaixo do limite inferior do intervalo (4)</th>
-      <th>Acima do limite superior do intervalo (5)</th>
-      <th>Abaixo do limite superior do intervalo (6)</th>
-      <th>Acima do limite inferior do intervalo (7)</th>
+      <th>Above or below the forecast (2)</th>
+      <th>Inside the interval (3)</th>
+      <th>Below the lower limit (4)</th>
+      <th>Above the upper limit (5)</th>
+      <th>Below the upper limit (6)</th>
+      <th>Above the lower limit (7)</th>
     </tr>
   </thead>
   <tbody>
@@ -133,13 +133,18 @@ group: articles
 <p>It is extremely easy to understand the table, for what it indicates are the forecast values, as well as the upper and lower limits of the prediction interval.</p>
 
 <p>Moreover, the table also brings the accrued value of the forecasts, which always appear on the column at your right.</p>
+
+<div class="img-box">
+  <img src="images/fig6.png"/>
+</div>
+
 <hr>
 <ol>
-<li>The forecasted period</li>
-<li>The lower limit of the interval of forecast</li>
-<li>The value of the forecast or the most likely value</li>
-<li>The upper limit of the interval of forecast</li>
-<li>The accrued value of the forecasts</li>
+  <li>The forecasted period</li>
+  <li>The lower limit of the interval of forecast</li>
+  <li>The value of the forecast or the most likely value</li>
+  <li>The upper limit of the interval of forecast</li>
+  <li>The accrued value of the forecasts</li>
 </ol>
 <hr>
 <p>At the example above, the history data that was provided in order to calculate the forecasts were available until August 2012, which means that the forecasts were calculated thence forward, from September 2012 and on.</p>
