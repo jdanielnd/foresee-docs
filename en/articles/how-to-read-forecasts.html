@@ -1,0 +1,151 @@
+---
+layout: page
+title: How to understand forecasts?
+group: articles
+---
+{% include JB/setup %}
+
+<p>When examining a Foresee plot, you will notice that, beyond the blue one - which represents the historical data of the forecasted series - there are 03 other lines (see Figure 1):</p>
+<ul>
+<li>01 green upper line</li>
+<li>01 yellow middle line</li>
+<li>01 red bottom line</li>
+</ul>
+
+<div class="img-box">
+  <img src="images/fig1.png"/>
+  <h5>Figure 1</h5>
+</div>
+
+<p>It is important to understand the meaning of each line.</p>
+
+<p>Any sales forecast, regardless of the method used, contains some degree of uncertainty, and the use of statistical methods is the best way available to deal with such uncertainty.</p>
+
+<p>Statistical forecasts represent future sales for a given period (for instance, for January 2013), not as a single value, which would be extremely difficult because of the uncertainties. Actually, future sales are represented as <strong>a set of possible values, each one with a different probability of occurrence</strong>. In other words, future sales are represented as <strong>probability distribution</strong>.</p>
+
+<div class="img-box">
+  <img src="images/fig2.png" width="500"/>
+  <h5>Fig. 2</h5>
+</div>
+
+<p>The figure above (Figure 2) represents the possible values of the revenue of a company's revenue for January 2013.</p>
+
+<p>On the horizontal axis are the different possible values for January 2013 sales, while the probability of occurrence of each value is represented by the height of the bell curve above it.</p>
+
+<p>If you take a look at the curve around $570,000 (measured by the length of the yellow stripe extended from the horizontal axis to the curve), you will notice that at this point the curve reaches its highest value, indicating that this is the <strong>most likely</strong> value for that company's revenue in January. Notice that this isn't the only possible result, but the most likely one.</p>
+
+<p>This most likely value is also known as the forecast.</p>
+
+<p>We can also notice in Figure 2 that, as we move away from the "neighborhood" of $570,000, toward either lower or higher values, the height of the curve decreases, showing lower probabilities of occurrence compared to the forecast.</p>
+
+<p>Now let's assume that the probability of the revenue for January to be between $500,000 (red stripe) and $640,000 (green stripe) is 80%.</p>
+
+<p>This interval between 500,000 and $600,000 known as the Prediction Interval (PI). In this example a PI of 80%, meaning that the probability of a future observation to fall within the PI limits is 80%.</p>
+
+<p>This is exactly what the Foresee forecast plot represents by those 03 curves: a PI, enclosed by the green and red curves, and a point forecast (most likely value), indicated by the yellow middle curve.</p>
+
+<div class="img-box">
+  <img src="images/fig3.png"/>
+  <h5>Fig. 3</h5>
+</div>
+
+<p>The forecast plot above (Figure 3 has been calculated using an 80% PI. For January 2013 ( the first forecasted month), the upper limit of the PI is $640,000 and the lower limit is $500,000. The forecast value is $570,000, which is the most likely value for the company's revenue for January 2013.</p>
+
+<p>The PI provide us with important tips (see Figure 4 below).</p>
+
+<div class="img-box">
+  <img src="images/fig4.png"/>
+  <h5>Fig. 4</h5>
+</div>
+
+<p>In this example, the 80% PI tells us that:</p>
+<hr>
+<ol>
+<li>Values close to $570,000 (a) - the forecasted value - are much more likely for the month of January than values closer to $500,000 (b) or $640,000 (c).</li>
+<li>The probability of revenue for January to be less than the forecasted value is 50% (d), in the same way that the probability of revenue to be above forecast is also 50% (e), since the forecasted value represents the middle point of a probability distribution, which contains all possible values for the January revenue.</li>
+<li>The company's revenue in January, with 80% certainty, is expected to fall between the lower limit ($500,000) and the upper limit ($640,000) of the 80% PI (f).</li>
+<li>The probability of revenue in January falling below the lower limit - i.e., below the red stripe ($500,000) - is only 10% (g).</li>
+<li>The probability of revenue in January falling above the upper limit - i.e., above the green stripe ($640,000) - is also only 10% (h).</li>
+<li>The probability of revenue in January falling below the upper limit ($640,000) is 90% (i), since the probability of this value falling into the PI range is 80%, and the probability of falling below the lower limit is 10%. Therefore, these two probabilities need to be added.</li>
+<li>The probability of revenue in January falling above the lower limit ($500,000) is 90% (j), that is, 80% probability of falling inside the PI, plus 10% probability of being above the upper limit of the interval.</li>
+</ol>
+<hr>
+
+<p>The table below shows the probabilities mentioned in items (2), (3), (4), (5), (6), and (7) above for the different PIs (70%, 80%, or 90%), which you can select when creating the forecasts with Foresee:</p>
+
+<div class="img-box">
+
+<table class="table table-striped table-bordered">
+  <thead>
+    <tr>
+      <th rowspan="2">Confidence Level of the Prediction Interval</th>
+      <th colspan="6">Probability that the observerved value will fall:</th>
+    </tr>
+    <tr>
+      <th>Above or below the forecast (2)</th>
+      <th>Inside the interval (3)</th>
+      <th>Below the lower limit (4)</th>
+      <th>Above the upper limit (5)</th>
+      <th>Below the upper limit (6)</th>
+      <th>Above the lower limit (7)</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><strong>70%</strong></td>
+      <td>50%</td>
+      <td>70%</td>
+      <td>15%</td>
+      <td>15%</td>
+      <td>85%</td>
+      <td>85%</td>
+    </tr>
+    <tr>
+      <td><strong>80%</strong></td>
+      <td>50%</td>
+      <td>80%</td>
+      <td>10%</td>
+      <td>10%</td>
+      <td>90%</td>
+      <td>90%</td>
+    </tr>
+    <tr>
+      <td><strong>90%</strong></td>
+      <td>50%</td>
+      <td>90%</td>
+      <td>5%</td>
+      <td>5%</td>
+      <td>95%</td>
+      <td>95%</td>
+    </tr>
+  </tbody>
+</table>
+<h5>Figure 5</h5>
+</div>
+
+<p>Notice that, for a certain PI, for instance, an 80% one, the probabilities related to the interval limits will always be the same, according to the table above. What will change are the values that define the upper and lower limits of the interval for each forecast series and period.</p>
+
+<section>
+<h3>Table with forecasted values</h3>
+
+<p>When examining a forecast created by Foresee, you will see a table right below the plot:</p>
+
+<div class="img-box">
+  <img src="images/fig6.png"/>
+</div>
+
+<p>The columns in the table above present:</p>
+
+<hr>
+<ol>
+  <li>The forecasted period</li>
+  <li>The lower limit of the PI</li>
+  <li>The point forecast (most likely value)</li>
+  <li>The upper limit of PI</li>
+  <li>The accrued value of the point forecasts</li>
+</ol>
+<hr>
+<p>In the example above, the historical data provided to calculate the forecasts were available until April 2013, which means that the forecasts were calculated from that point forward, i.e, from May 2013 on.</p>
+
+<p>Tip: In this example, if you want to know the cumulative sales for the May-Dec 2013 period,you only need to examine the accrued value of the forecasts until December 2013, which in this case is $42,727,989.</p>
+</section>
