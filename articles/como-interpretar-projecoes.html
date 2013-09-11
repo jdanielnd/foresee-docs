@@ -158,3 +158,46 @@ group: articles
 
 <p><strong>Importante!</strong> Se a empresa quiser saber, neste exemplo, qual o valor projetado para suas vendas de setembro de 2012 (1º período projetado) até o final do ano, basta examinar o valor acumulado das projeções até dezembro de 2012, que neste caso foi de R$ 2.406.368.</p>
 </section>
+
+<section>
+<h3>Medidas de Ajuste do Modelo</h3>
+
+<ol>
+  <li>
+    <h4>MAPE</h4>
+    <p>O MAPE (Mean Absolute Percentage Error) ou Erro Percentual Absoluto Médio é uma medida de erro do modelo ajustado para projetar uma determinada série.</p>
+
+    Esta medida de erro é dada pela fórmula abaixo:
+
+    <div class="img-box">
+      <img src="images/eq_mape.png"/>
+    </div>
+
+    <p>Onde:</p>
+    <ul>
+      <li>n é o número de períodos (ex: o número de meses) que compõem uma determinada série;</li>
+      <li>t  representa os diferentes períodos da série (ex: o 1º mês, o 2º mês, etc.)</li>
+      <li><img src="images/o_t_small.png"> representa os diferentes valores observados da série nos diferentes períodos (ex: o valor das vendas em cada um dos meses);</li>
+      <li><img src="images/a_t_small.png"> representa os diferentes valores ajustados do modelo para cada um dos períodos (ex: quanto o modelo estimou que deveriam ser as vendas no 1º mês, no 2º mês, etc.).</li>
+    </ul>
+
+    <p>Na figura abaixo, o MAPE de 5,03% significa que os erros cometidos pelo modelo ao estimar os valores da série foram, em média, de 5,03% para cima ou para baixo.</p>
+  </li>
+  <li>
+    <h4>MAE </h4>
+    
+    <p>O MAE (Mean Absolute Error) ou Erro Médio Absoluto é também uma medida de erro do modelo, semelhante ao MAPE, com a diferença de que neste caso (MAE) o erro médio não é expresso como um percentual, mas sim como um determinado número de unidades da própria variável que está sendo modelada.</p>
+    
+    <div class="img-box">
+      <img src="images/eq_mae.png"/>
+    </div>
+
+    <p>Na figura abaixo, o MAE de 19.753,76 significa que os erros cometidos pelo modelo ao estimar os valores da série foram, em média, de 19.753,76 unidades para cima ou para baixo.</p>
+
+    <p>Essas medidas são extremamente importantes, uma vez que nos dão uma ideia do tamanho dos erros que devemos esperar em relação aos valores projetados pelo modelo.</p>
+    </li>
+
+    <div class="img-box">
+      <img src="images/mape_example.png"/>
+    </div>
+</section>

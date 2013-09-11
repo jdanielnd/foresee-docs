@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+  <!DOCTYPE html>
 <html>
   <head>
     <meta charset="utf-8">
@@ -39,7 +39,11 @@
     <div class="navbar navbar-fixed-top">
       <div class="navbar-inner">
         <div class="container">
-          <a class="brand" href="{{ HOME_PATH }}">Fores.<span>ee</span>:docs</a>
+          <div class="row">
+            <div class="offset1">
+              <a class="brand" href="{{ HOME_PATH }}"><img src="logo_app_trans.png"/></a>
+            </div>
+          </div>
         </div>
       </div>
     </div>
@@ -60,9 +64,13 @@
           </div>
       </div>
       <hr>
-      <footer>
-        <p>&copy; {{ site.time | date: '%Y' }} {{ site.author.name }}</p>
-      </footer>
+      <div class="row">
+        <div class="offset1">
+          <footer>
+            <p>&copy; {{ site.time | date: '%Y' }} {{ site.author.name }}</p>
+          </footer>
+        </div>
+      </div>
 
     </div>
 
