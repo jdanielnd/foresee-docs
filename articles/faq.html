@@ -24,7 +24,7 @@ jQuery(document).ready(function() {
   <li><a class="scroll" href="#1">A escolha do Intervalo de Predição (70%, 80% e 90%) afeta a precisão das projeções?</a></li>
   <li><a class="scroll" href="#2">O que determina o tamanho de um Intervalo de Predição?</a></li>
   <li><a class="scroll" href="#3">Os Limites Superiores e Inferiores de um Intervalo de Predição podem ser interpretados como “melhor cenário” e “pior cenário” de vendas?</a></li>
-  <li><a class="scroll" href="#4">O Foresee pode eventualmente projetar “valores negativos” para as vendas de um produto?</a></li>
+  <li><a class="scroll" href="#4">O Foresee pode eventualmente projetar “valores negativos” para uma determinada série de negócios?</a></li>
   <li><a class="scroll" href="#5">Qual é o método utilizado pelo Foresee para o cálculo das projeções?</a></li>
   <li><a class="scroll" href="#6">Os erros de predição são afetados pelo nível de agregação dos dados?</a></li>
   <li><a class="scroll" href="#7">Como eliminar os separadores de milhar no meu arquivo de dados CSV?</a></li>
@@ -63,8 +63,8 @@ jQuery(document).ready(function() {
   <li id="4">
     <p><strong>O Foresee pode eventualmente projetar “valores negativos” para as vendas de um produto?</strong></p>
     <p>Sim. Eventualmente as projeções podem indicar valores abaixo de zero.</p>
-    <p>Obviamente, isso não faz sentido do ponto de vista econômico, uma vez que não existem vendas “negativas”.</p>
-    <p>Entretanto esses valores fazem sentido do ponto de vista estatístico, e devem ser interpretados como indicando uma probabilidade mais elevada de que as vendas daquele produto possam ficar “zeradas” durante os períodos para os quais as projeções assinalaram valores negativos. E essa probabilidade será tanto maior quanto mais negativos forem os valores projetados.</p>
+    <p>Para determinadas séries, como por exemplo, receita ou volume físico de vendas, isso não faz sentido do ponto de vista econômico, uma vez que não existem receitas ou vendas “negativas”.</p>
+    <p>Entretanto esses valores fazem sentido do ponto de vista estatístico, e devem ser interpretados como indicando uma probabilidade mais elevada de que os valores daquela série possam ficar “zerados” durante os períodos para os quais as projeções assinalaram valores negativos. E essa probabilidade será tanto maior quanto mais negativos forem os valores projetados.</p>
   </li>
 
   <li id="5">
